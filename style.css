@@ -1,0 +1,156 @@
+:root {
+  /* neutral colors */
+  --hd-clr: hsl(234, 12%, 34%);
+  --cnt-clr: hsl(229, 6%, 66%);
+  --bg-clr: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-clr);
+}
+/* colors */
+h1,
+h2 {
+  color: var(--hd-clr);
+}
+p {
+  color: var(--cnt-clr);
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem auto;
+  /* width: 95%; */
+  border: 1px solid magenta;
+}
+
+header {
+  text-align: center;
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  display: block;
+  color: var(--cnt-clr);
+  font-weight: 200;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 650px;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.cards:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.cards {
+  width: 350px;
+}
+.card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px hsl(229, 6%, 66%, 40%);
+  padding: 2rem 1.75rem;
+}
+.sub-card {
+  width: 100%;
+}
+
+.cards:not(:last-child) {
+  margin-right: 2rem;
+}
+.sub-card:first-child {
+  margin-bottom: 2rem;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--fill);
+}
+.top.supervisor {
+  --fill: hsl(180, 62%, 55%);
+}
+.top.team-builder {
+  --fill: hsl(0, 78%, 62%);
+}
+.top.karma {
+  --fille: hsl(34, 97%, 64%);
+  --fill: hsl(212, 86%, 64%);
+}
+.top.calculator {
+  --fill: hsl(212, 86%, 64%);
+}
+
+.content {
+  margin: 1.5rem 0;
+  font-size: 0.825rem;
+}
+
+.card-img {
+  width: 65px;
+  align-self: flex-end;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    width: 95%;
+  }
+  .cards-container {
+    flex-direction: column;
+    width: clamp(320px, 100%, 650px);
+    border: 1px solid magenta;
+  }
+
+  .cards {
+    width: 100%;
+  }
+  .cards:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
