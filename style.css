@@ -131,7 +131,6 @@ header {
   .cards-container {
     flex-direction: column;
     width: clamp(320px, 100%, 650px);
-    border: 1px solid magenta;
   }
 
   .cards {
@@ -169,17 +168,5 @@ header {
   .card-img {
     width: 55px;
     align-self: flex-end;
-  }
-}
-
-@media (max-width: 365px) {
-  .title {
-    font-size: 1.5rem;
-  }
-  .card-title {
-    font-size: 1.15rem;
-  }
-  .card {
-    padding: 1.5rem 1.5rem;
   }
 }
