@@ -159,6 +159,9 @@ header {
   .title {
     font-size: 1.675rem;
   }
+  .subtitle {
+    font-size: 0.9rem;
+  }
   .card-title {
     font-size: 1.225rem;
   }
